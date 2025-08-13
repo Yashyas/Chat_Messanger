@@ -5,7 +5,7 @@ const { MongoClient } = require("mongodb");
 
 const MONGO_URI = "mongodb+srv://admin:admin@todo.l6eu346.mongodb.net/";
 const DB_NAME = "whatsapp";
-const COLLECTION_NAME = "processed_messages";
+const COLLECTION_NAME = "messages";
 const PAYLOADS_FOLDER = "./payloads"; // where JSON files are stored
 
 async function processPayloads() {

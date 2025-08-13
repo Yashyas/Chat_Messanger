@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
-const JWT_SECRET = "your_jwt_secret_here"; // move to .env in production
+const JWT_SECRET = process.env.JWT_SECRET; // move to .env in production
 
 module.exports = function (req, res, next) {
   const authHeader = req.headers["authorization"];

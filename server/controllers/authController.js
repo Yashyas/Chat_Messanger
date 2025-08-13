@@ -1,7 +1,8 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
+require("dotenv").config();
 
-const JWT_SECRET = "your_jwt_secret_here"; // Use process.env.JWT_SECRET in production
+const JWT_SECRET =  process.env.JWT_SECRET; // Use process.env.JWT_SECRET in production
 
 exports.signup = async (req, res) => {
   try {

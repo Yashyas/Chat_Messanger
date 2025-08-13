@@ -1,7 +1,12 @@
 const mongoose = require("mongoose");
 
 const conversationSchema = new mongoose.Schema({
-  conversationId: { type: String, required: true, unique: true },
+  conversationId: { 
+    type: String, 
+    required: true, 
+    unique: true, 
+    default: () => `conv_${Date.now()}_${Math.random().toString(36).substring(2,8)}`
+  },
   participants: [String],
   origin: String,
   expirationTimestamp: Number,
